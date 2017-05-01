@@ -10,7 +10,7 @@ title: This is the Wagon Bordeaux Team
       <% data.team_members.each do |member| %>
         <div class="col-md-3 col-sm-6"></div>
           <% link_to "/buddies/#{member[:name].downcase}.html" do %>
-            <img class="avatar" src="<%= member[:picture_url] %>" alt="<%= "#{member[:name]} - #{member[:position]}" %>">
+            <img class="avatar-large text-center" src="<%= member[:picture_url] %>" alt="<%= "#{member[:name]} - #{member[:position]}" %>">
           <% end %>
         <h3><%= member[:name] %></h3>
         <p><%= member[:position] %></p>
