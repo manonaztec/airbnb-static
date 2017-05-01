@@ -6,14 +6,15 @@ title: This is the Wagon Bordeaux Team
 
   <div class="container text-center"></div>
     <div class="row">
-    <ul class="list-inline text-center">
-      <% data.team_members.each do |member| %>
-        <div class="col-md-3 col-sm-6"></div>
-          <% link_to "/buddies/#{member[:name].downcase}.html" do %>
-            <img class="avatar-large text-center" src="<%= member[:picture_url] %>" alt="<%= "#{member[:name]} - #{member[:position]}" %>">
-          <% end %>
-        <h3><%= member[:name] %></h3>
-        <p><%= member[:position] %></p>
-      <% end %>
+      <ul class="list-inline text-center">
+        <% data.team_members.each do |member| %>
+            <% link_to "/buddies/#{member[:name].downcase}.html" do %>
+              <img class="avatar-large" src="<%= member[:picture_url] %>" alt="<%= "#{member[:name]} - #{member[:position]}" %>">
+            <% end %>
+          <h3><%= member[:name] %></h3>
+          <p><%= member[:position] %></p>
+        <% end %>
+      </ul>
+    </div>
 
 
